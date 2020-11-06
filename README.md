@@ -9,3 +9,5 @@ Here are some of the commands:
 4. $deleteRole [@user] @role: deletes a role from a user or group
 5. dadbot : when sending "i'm" into the server, the bot responds with "hi [phrase], I'm dad".
 ex) user: "Man I'm tired", bot-response: "hi tired, I'm dad"
+
+To use this bot, install node and the zipped folder. Then, type "node ." in the terminal. You will also need to set up a bot with admin permissions with the [discord permissions calcultor] (https://discordapi.com/permissions.html)
