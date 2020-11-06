@@ -10,4 +10,4 @@ Here are some of the commands:
 5. dadbot : when sending "i'm" into the server, the bot responds with "hi [phrase], I'm dad".
 ex) user: "Man I'm tired", bot-response: "hi tired, I'm dad"
 
-To use this bot, install node and the zipped folder. Then, type "node ." in the terminal. You will also need to set up a bot with admin permissions with the [discord permissions calculator](https://discordapi.com/permissions.html). Finally, you will need to find your client id and token id for your bot using the (discord applications website)[https://discord.com/developers/applications]
+To use this bot, install node and the zipped folder. Then, type "node ." in the terminal. You will also need to set up a bot with admin permissions with the [discord permissions calculator](https://discordapi.com/permissions.html). Finally, you will need to find your client id and token id for your bot using the [discord applications website] (https://discord.com/developers/applications)
