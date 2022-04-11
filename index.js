@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const prefix = '$';
 const fs = require('fs');
 require('dotenv').config();
+require("./keepAlive")
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -28,33 +29,33 @@ client.on('message', message => {
         client.commands.get('inspire').execute(message)
     }
 
-    if(command === 'meme'){
-        client.commands.get('meme').execute(message)
-        message.delete({timeout : process.env.TimeOut}).catch(e => console.log(e))
-    }
+    // if(command === 'meme'){
+    //     client.commands.get('meme').execute(message)
+    //     message.delete({timeout : process.env.TimeOut}).catch(e => console.log(e))
+    // }
 
-    if(command === 'deleterole' && isAdmin()){
-        client.commands.get('deleteRole').execute(message,args)
-        message.delete({timeout : process.env.Timeout}).catch(e => console.log(e))
-    }
+    // if(command === 'deleterole' && isAdmin()){
+    //     client.commands.get('deleteRole').execute(message,args)
+    //     message.delete({timeout : process.env.Timeout}).catch(e => console.log(e))
+    // }
 
-    if(command === 'bulkdelete' && isAdmin()){
-        message.channel.bulkDelete(args[0]).catch(e => console.log(e))
-    }
+    // if(command === 'bulkdelete' && isAdmin()){
+    //     message.channel.bulkDelete(args[0]).catch(e => console.log(e))
+    // }
 
-    if(command === 'setrole' && isAdmin()){
-        client.commands.get('setRole').execute(message,args)
-        message.delete({timeout : 5000}).catch(e => console.log(e))
-    }
+    // if(command === 'setrole' && isAdmin()){
+    //     client.commands.get('setRole').execute(message,args)
+    //     message.delete({timeout : 5000}).catch(e => console.log(e))
+    // }
 
     client.commands.get('dadBot').execute(message)
 
-    if(message.author.username === 'JJSlayer74'){
-        message.delete()
-            .then(message.channel.send("Your opinion is terminated " + message.author.username))
-                .then(msg => msg.delete({timeout : process.env.TimeOut}))
-                .catch(e => console.log(e)) 
-    }
+    // if(message.author.username === 'JJSlayer74'){
+    //     message.delete()
+    //         .then(message.channel.send("Your opinion is terminated " + message.author.username))
+    //             .then(msg => msg.delete({timeout : process.env.TimeOut}))
+    //             .catch(e => console.log(e)) 
+    // }
 });
 
 client.login(process.env.Discord_Auth_Token);
