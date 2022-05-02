@@ -31,6 +31,6 @@ module.exports = {
         iconURL: "https://i.imgur.com/AfFp7pu.png",
       });
 
-    return message.channel.send({ embeds: [exampleEmbed] });
+    return message.channel.send({embed: exampleEmbed});
   },
 };
