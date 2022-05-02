@@ -17,16 +17,32 @@ client.once('ready', () => {
     console.log('The bot is functioning!');
 });
 
+client.on("message", (message)=> {
+    console.log(message.author.presence)
+    const activity = message.author.presence.activities
+    console.log(activity)
+    if (activity !== null && activity.length >= 1) {
+        print(activity[0].name)
+        if (activity[0].name.toLowerCase() === "league of legends") {
+            print("banning this person :(")
+        }
+    }
+})
+
 client.on('message', message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    function isAdmin() {
-        return message.member.roles.cache.find(r => r.name === 'Admin') != undefined
-    }
+    // function isAdmin() {
+    //     return message.member.roles.cache.find(r => r.name === 'Admin') != undefined
+    // }
     
     if(command === 'inspire'){
         client.commands.get('inspire').execute(message)
+    }
+
+    if(command === 'help'){
+        client.commands.get('help').execute(message)
     }
 
     // if(command === 'meme'){
