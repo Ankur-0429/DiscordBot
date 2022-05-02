@@ -4,7 +4,7 @@ const { MessageEmbed } = require("discord.js");
 module.exports = {
   name: "help",
   description: "help embed",
-  execute() {
+  execute(message) {
     // inside a command, event listener, etc.
     const exampleEmbed = new MessageEmbed()
       .setColor("#0099ff")
@@ -31,6 +31,6 @@ module.exports = {
         iconURL: "https://i.imgur.com/AfFp7pu.png",
       });
 
-    channel.send({ embeds: [exampleEmbed] });
+    return message.channel.send({ embeds: [exampleEmbed] });
   },
 };
