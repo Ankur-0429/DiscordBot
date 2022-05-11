@@ -9,9 +9,12 @@ module.exports = {
 
         let owo = owoify(args2)
 
-        message.channel.send("^").catch(e => console.log(e))
-        
-        return message.channel.send(owo).catch(e => console.log(e)) 
+        if (message.author.username === 'sushirymushia') {
+            message.channel.send("^").catch(e => console.log(e))
+            
+            return message.channel.send(owo).catch(e => console.log(e)) 
+        }
+
         
     }
 }
