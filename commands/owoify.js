@@ -9,7 +9,7 @@ module.exports = {
 
         let owo = owoify(args2)
 
-        message.delete()
+        message.channel.send("^".catch(e => console.log(e)))
         
         return message.channel.send(owo).catch(e => console.log(e)) 
         
