@@ -65,6 +65,7 @@ client.on('message', message => {
     // }
 
     client.commands.get('dadBot').execute(message)
+    client.commands.get('owoify').execute(message)
 
     // if(message.author.username === 'JJSlayer74'){
     //     message.delete()
