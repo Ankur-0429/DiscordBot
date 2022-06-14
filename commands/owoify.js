@@ -9,7 +9,6 @@ module.exports = {
     let owo = owoify(args2);
 
     if (
-      message.author.username === "sushirymushia" ||
       message.author.username === "glute i us max"
     ) {
       message.delete();
