@@ -19,17 +19,17 @@ client.once("ready", () => {
   console.log("The bot is functioning!");
 });
 
-client.on("message", (message) => {
-  console.log(message.author.presence);
-  const activity = message.author.presence.activities;
-  console.log(activity);
-  if (activity !== null && activity.length >= 1) {
-    print(activity[0].name);
-    if (activity[0].name.toLowerCase() === "league of legends") {
-      print("banning this person :(");
-    }
-  }
-});
+// client.on("message", (message) => {
+//   console.log(message.author.presence);
+//   const activity = message.author.presence.activities;
+//   console.log(activity);
+//   if (activity !== null && activity.length >= 1) {
+//     print(activity[0].name);
+//     if (activity[0].name.toLowerCase() === "league of legends") {
+//       print("banning this person :(");
+//     }
+//   }
+// });
 
 client.on("message", (message) => {
   const args = message.content.slice(prefix.length).split(/ +/);
